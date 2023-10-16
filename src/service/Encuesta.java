@@ -1,3 +1,5 @@
+package service;
+
 import java.util.*;
 
 import model.Estudiante;
@@ -6,7 +8,8 @@ public class Encuesta implements IEncuestaDao {
 
     List<Estudiante> estudiantes = new ArrayList<>();
 
-    public void agregarEstudiante(String nombre, String apellido, int edad, String correo) throws Excepciones.nullExcepcion, Excepciones.EdadExcepcion, Excepciones.correoExcepcion {
+    @Override
+    public void agregarEstudiante(String nombre, String apellido, int edad, String correo) throws Exception {
         Estudiante estudiante = new Estudiante(nombre, apellido, edad, correo);
         if ((nombre.length() == 0) || (apellido.length() == 0) ) {
             throw new Excepciones.nullExcepcion("Este campo no puede estar vacío.");
@@ -23,6 +26,7 @@ public class Encuesta implements IEncuestaDao {
     }
 
 
+    @Override
     public void mostrarEstudiantes() {
         estudiantes.forEach(System.out::println);
     }

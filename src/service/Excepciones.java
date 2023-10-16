@@ -1,3 +1,5 @@
+package service;
+
 public class Excepciones extends Exception {
     public static class EdadExcepcion extends Exception {
         public EdadExcepcion(String message) {
@@ -15,5 +17,6 @@ public class Excepciones extends Exception {
         }
     }
 }
-    
+
+
 

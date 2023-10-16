@@ -1,5 +1,5 @@
-
-    public class App {
+import service.*;
+public class App {
         
         public static void main(String[] args) throws Exception {
             String nombre = "";
@@ -7,7 +7,7 @@
             int edad = 80;
             String correo = "ana@gmail.com";
             try {
-                Encuesta encuesta = new Encuesta(); 
+                Encuesta encuesta = new service.Encuesta();
                 encuesta.agregarEstudiante(nombre, apellido, edad, correo); 
                 encuesta.mostrarEstudiantes(); 
             }
