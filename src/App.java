@@ -7,9 +7,9 @@
             int edad = 80;
             String correo = "ana@gmail.com";
             try {
-                Encuesta encuesta = new Encuesta(); // create an instance of Encuesta
-                encuesta.agregarEstudiante(nombre, apellido, edad, correo); // call non-static method on instance
-                encuesta.mostrarEstudiantes(); // call non-static method on instance
+                Encuesta encuesta = new Encuesta(); 
+                encuesta.agregarEstudiante(nombre, apellido, edad, correo); 
+                encuesta.mostrarEstudiantes(); 
             }
             catch (Excepciones.correoExcepcion e) // También se pueden importar y llamar solo por su nombre.
             {
